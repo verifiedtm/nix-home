@@ -3,6 +3,7 @@
 {
   imports = [
     ./git.nix
+    ./delta.nix
     ./vim.nix
     ./neovim.nix
     ./kitty.nix
