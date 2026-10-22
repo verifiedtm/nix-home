@@ -12,6 +12,11 @@
     ./fzf.nix
     ./starship.nix
     ./ripgrep.nix
+    ./eza.nix
+    ./bat.nix
+    ./zoxide.nix
+    ./atuin.nix
+    ./television.nix
   ];
 
   programs.home-manager.enable = true;
