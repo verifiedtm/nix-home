@@ -10,6 +10,9 @@
 
     extraConfig = builtins.readFile ../dotfiles/vim/vimrc;
 
+    withRuby = false;
+    withPython = false;
+
     initLua = ''
       local opt = vim.opt
 
