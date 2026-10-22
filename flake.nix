@@ -34,7 +34,7 @@
 
             {
               home.username = "test";
-              home.homeDirectory = if pkgs.stdenv.isDarwin then "/Users/test" else "/home/test";
+              home.homeDirectory = if pkgs.stdenv.hostPlatform.isDarwin then "/Users/test" else "/home/test";
               home.stateVersion = "25.11";
             }
           ];
