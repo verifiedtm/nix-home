@@ -13,9 +13,9 @@
       ignoreAllDups = true;
     };
 
-    shellAliases = {
-      ls = if pkgs.stdenv.hostPlatform.isDarwin then "ls -G" else "ls --color=auto";
-    };
+    # shellAliases = {
+    #   ls = if pkgs.stdenv.hostPlatform.isDarwin then "ls -G" else "ls --color=auto";
+    # };
 
     initContent = ''
       bindkey -e
