@@ -11,6 +11,7 @@
     ./zsh.nix
     ./fzf.nix
     ./starship.nix
+    ./ripgrep.nix
   ];
 
   programs.home-manager.enable = true;
