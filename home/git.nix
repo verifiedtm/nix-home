@@ -23,6 +23,7 @@
       alias = {
         tree = "log --oneline --decorate --all --graph";
         prune-branches = ''!git branch --format='%(if)%(worktreepath)%(then)%(else)%(refname:short)%(end)' | while IFS= read -r branch; do [ -z "$branch" ] || git branch -d -- "$branch"; done'';
+        prune-branches-hard = ''!git branch --format='%(if)%(worktreepath)%(then)%(else)%(refname:short)%(end)' | while IFS= read -r branch; do [ -z "$branch" ] || git branch -D -- "$branch"; done'';
         git = ''!f() { printf "%s\n" "You git it. You git it twice. Now commit to something."; }; f'';
         cool-log = "log --graph --oneline --decorate --left-right --boundary origin/master...HEAD";
       };
