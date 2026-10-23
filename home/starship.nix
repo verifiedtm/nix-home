@@ -41,10 +41,15 @@
         unloaded_msg = "offline";
       };
 
+      username = {
+        show_always = true;
+        format = "[$user@]($style)";
+      };
+
       hostname = {
         ssh_only = false;
         ssh_symbol = "ssh://";
-        format = "[$ssh_symbol$hostname]($style) in ";
+        format = "[$ssh_symbol$hostname]($style)";
         style = "bold cyan";
       };
 
