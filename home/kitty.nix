@@ -1,5 +1,8 @@
 { ... }:
 
 {
-  xdg.configFile."kitty/kitty.conf".source = ../dotfiles/kitty/kitty.conf;
+  xdg.configFile."kitty" = {
+    source = ../dotfiles/kitty;
+    recursive = true;
+  };
 }
