@@ -18,6 +18,7 @@
     ./atuin.nix
     ./television.nix
     ./fastfetch.nix
+    ./cava.nix
   ];
 
   programs.home-manager.enable = true;
