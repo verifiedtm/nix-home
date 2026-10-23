@@ -41,6 +41,13 @@
         unloaded_msg = "offline";
       };
 
+      hostname = {
+        ssh_only = false;
+        ssh_symbol = "ssh://";
+        format = "[$ssh_symbol$hostname]($style) in ";
+        style = "bold cyan";
+      };
+
       directory = {
         truncation_length = 0;
         truncate_to_repo = false;
