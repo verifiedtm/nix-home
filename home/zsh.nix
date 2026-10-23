@@ -13,9 +13,11 @@
       ignoreAllDups = true;
     };
 
-    # shellAliases = {
-    #   ls = if pkgs.stdenv.hostPlatform.isDarwin then "ls -G" else "ls --color=auto";
-    # };
+    shellAliases = {
+      # ls = if pkgs.stdenv.hostPlatform.isDarwin then "ls -G" else "ls --color=auto";
+      tree = "eza --tree --icons";
+      catp = "bat --style=plain";
+    };
 
     initContent = ''
       bindkey -e
