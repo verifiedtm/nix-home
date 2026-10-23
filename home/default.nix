@@ -17,6 +17,7 @@
     ./zoxide.nix
     ./atuin.nix
     ./television.nix
+    ./fastfetch.nix
   ];
 
   programs.home-manager.enable = true;
