@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, pkgs, ... }:
 
 {
   programs.fastfetch = {
@@ -24,8 +24,12 @@
         "packages"
         "shell"
         "terminal"
+      ]
+      ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
         "de"
         "wm"
+      ]
+      ++ [
         "cpu"
         "gpu"
         "memory"
