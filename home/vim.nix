@@ -1,9 +1,8 @@
 { lib, pkgs, ... }:
-
-# no idea why this won't build on macOS
-lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
+{
   programs.vim = {
     enable = true;
+    packageConfigurable = pkgs.vim;
 
     plugins = with pkgs.vimPlugins; [
       fzf-vim
