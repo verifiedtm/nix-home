@@ -31,9 +31,9 @@ in
         "$os"
         "$username"
         "$hostname"
-        "([](fg:${colors.identity} bg:${colors.git})$git_branch)"
-        "$git_status"
-        "([](fg:${colors.git} bg:${colors.direnv})$direnv)"
+        "[](fg:${colors.identity})"
+        "([ ](fg:${colors.git})$git_branch$git_status[](fg:${colors.git}))"
+        "$direnv"
         "$time"
         "\n"
         "$directory"
@@ -75,8 +75,9 @@ in
         disabled = false;
         symbol = "󰒓";
         format =
-          "[ $symbol $loaded ](fg:${colors.cyan} bg:${colors.direnv})"
-          + "[](fg:${colors.direnv} bg:${colors.time})";
+          "[ ](fg:${colors.direnv})"
+          + "[ $symbol $loaded ](fg:${colors.cyan} bg:${colors.direnv})"
+          + "[](fg:${colors.direnv})";
         loaded_msg = "online";
         unloaded_msg = "offline";
       };
@@ -85,7 +86,7 @@ in
         disabled = false;
         time_format = "%H:%M";
         style = "fg:${colors.purple} bg:${colors.time}";
-        format = "[  $time ]($style)[](fg:${colors.time})";
+        format = "[ ](fg:${colors.time})" + "[  $time ]($style)" + "[](fg:${colors.time})";
       };
 
       directory = {
