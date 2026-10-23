@@ -19,6 +19,9 @@
     ./television.nix
     ./fastfetch.nix
     ./cava.nix
+    ./btop.nix
+    ./yazi.nix
+    ./lazygit.nix
   ];
 
   programs.home-manager.enable = true;
