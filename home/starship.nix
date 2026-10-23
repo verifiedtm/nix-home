@@ -72,7 +72,7 @@ in
       direnv = {
         disabled = false;
         symbol = "󰒓";
-        format = "[ $symbol $loaded ](fg:#7dcfff)";
+        format = "[ $symbol $loaded ](fg:#7dcfff bg:#212736)[](fg:#212736 bg:#1f2335)";
         loaded_msg = "online";
         unloaded_msg = "offline";
       };
