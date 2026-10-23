@@ -31,8 +31,11 @@ in
         "$os"
         "$username"
         "$hostname"
-        "([](fg:${colors.identity} bg:${colors.git})$git_branch$git_status)"
-        "([](fg:${colors.git} bg:${colors.direnv})$direnv)"
+        "[](fg:${colors.identity} bg:${colors.git})"
+        "$git_branch"
+        "$git_status"
+        "[](fg:${colors.git} bg:${colors.direnv})"
+        "$direnv"
         "[](fg:${colors.direnv})"
         "\n"
         "$directory"
@@ -73,10 +76,7 @@ in
       direnv = {
         disabled = false;
         symbol = "󰒓";
-        format =
-          "[ ](fg:${colors.direnv})"
-          + "[ $symbol $loaded ](fg:${colors.cyan} bg:${colors.direnv})"
-          + "[](fg:${colors.direnv})";
+        format = "[ $symbol $loaded ](fg:${colors.cyan} bg:${colors.direnv})";
         loaded_msg = "online";
         unloaded_msg = "offline";
       };
