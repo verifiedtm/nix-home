@@ -15,7 +15,7 @@
 
     shellAliases = {
       # ls = if pkgs.stdenv.hostPlatform.isDarwin then "ls -G" else "ls --color=auto";
-      tree = "eza --tree --icons";
+      tree = "eza --tree --icons --git-ignore";
       catp = "bat --style=plain";
     };
 
