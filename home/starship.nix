@@ -76,7 +76,9 @@ in
       direnv = {
         disabled = false;
         symbol = "󰒓";
-        format = "[ $symbol $loaded ](fg:#7dcfff bg:#212736)[](fg:#212736 bg:#1f2335)";
+        format =
+          "[ $symbol $loaded ](fg:${colors.cyan} bg:${colors.direnv})"
+          + "[](fg:${colors.direnv} bg:${colors.time})";
         loaded_msg = "online";
         unloaded_msg = "offline";
       };
@@ -84,8 +86,8 @@ in
       time = {
         disabled = false;
         time_format = "%H:%M";
-        style = "fg:${colors.purple} bg:#1f2335";
-        format = "[ ](fg:#212736 bg:#1f2335)[   $time ]($style)[ ](fg:#1f2335)";
+        style = "fg:${colors.purple} bg:${colors.time}";
+        format = "[  $time ]($style)[](fg:${colors.time})";
       };
 
       directory = {
