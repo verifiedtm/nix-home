@@ -4,8 +4,8 @@ let
   colors = {
     identity = "#a3aed2";
     git = "#394260";
-    direnv = "#212736";
-    time = "#1f2335";
+    direnv = "#25465c";
+    time = "#352d4f";
 
     surface = "#1a1b26";
     blue = "#7aa2f7";
