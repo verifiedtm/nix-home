@@ -71,7 +71,7 @@ in
 
       direnv = {
         disabled = false;
-        symbol = "  ";
+        symbol = "󱄅";
         format = "[ $symbol$loaded ](fg:${colors.cyan} bg:#212736)[ ](fg:#212736)";
         loaded_msg = "online";
         unloaded_msg = "offline";
