@@ -4,6 +4,9 @@ let
   colors = {
     identity = "#a3aed2";
     git = "#394260";
+    direnv = "#212736";
+    time = "#1f2335";
+
     surface = "#1a1b26";
     blue = "#7aa2f7";
     cyan = "#7dcfff";
@@ -12,6 +15,7 @@ let
     green = "#9ece6a";
     red = "#f7768e";
   };
+
 in
 {
   programs.starship = {
@@ -30,7 +34,7 @@ in
         "[](fg:${colors.identity} bg:${colors.git})"
         "$git_branch"
         "$git_status"
-        "[](fg:${colors.git})"
+        "[](fg:${colors.git} bg:${colors.direnv})"
         "$direnv"
         "$time"
         "\n"
