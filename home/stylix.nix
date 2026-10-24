@@ -5,8 +5,11 @@
     enable = true;
     autoEnable = true;
 
-    base16Scheme = "${pkgs.base16-scemes}/share/themes/tokyo-night-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
 
     polarity = "dark";
+    targets = {
+      kde.enable = false;
+    };
   };
 }

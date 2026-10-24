@@ -5,7 +5,7 @@
     enable = true;
 
     config = {
-      theme = "TwoDark";
+      # theme = "TwoDark";
       style = "numbers,changes,header";
     };
   };
