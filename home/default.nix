@@ -6,7 +6,6 @@
     ./delta.nix
     ./vim.nix
     ./neovim.nix
-    ./kitty.nix
     ./direnv.nix
     ./zsh.nix
     ./fzf.nix
