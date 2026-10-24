@@ -8,6 +8,10 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -16,10 +20,16 @@
       nixpkgs,
       flake-utils,
       home-manager,
+      stylix,
       ...
     }:
     {
-      homeManagerModules.default = ./home/default.nix;
+      homeManagerModules.default = {
+        imports = [
+          ./home/default.nix
+          stylix.homeModules.stylix
+        ];
+      };
     }
     // flake-utils.lib.eachDefaultSystem (
       system:
