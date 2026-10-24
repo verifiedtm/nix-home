@@ -15,7 +15,6 @@
       bat.enable = true;
       btop.enable = true;
       cava.enable = true;
-      delta.enable = true;
       fzf.enable = true;
       lazygit.enable = true;
       vim.enable = true;
