@@ -14,17 +14,15 @@ in
 
       true-color = "always";
 
-      minus-style = "syntax ${colors.base01}";
-      minus-emph-style = "syntax bold ${colors.base02}";
-      plus-style = "syntax ${colors.base01}";
-      plus-emph-style = "syntax bold ${colors.base02}";
+      # delta's built-in red/green diff styling
+      minus-style = "normal auto";
+      plus-style = "normal auto";
 
-      file-style = "${colors.base0D} bold";
-      hunk-header-style = "syntax ${colors.base02}";
-
-      line-numbers-minus-style = colors.base08;
-      line-numbers-plus-style = colors.base0B;
-
+      # stylix accents
+      file-style = "${c.base0D} bold";
+      hunk-header-style = "syntax ${c.base02}";
+      line-numbers-minus-style = c.base08;
+      line-numbers-plus-style = c.base0B;
     };
   };
 }
