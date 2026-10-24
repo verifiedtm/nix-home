@@ -19,10 +19,10 @@ in
       plus-style = "normal auto";
 
       # stylix accents
-      file-style = "${c.base0D} bold";
-      hunk-header-style = "syntax ${c.base02}";
-      line-numbers-minus-style = c.base08;
-      line-numbers-plus-style = c.base0B;
+      file-style = "${colors.base0D} bold";
+      hunk-header-style = "syntax ${colors.base02}";
+      line-numbers-minus-style = colors.base08;
+      line-numbers-plus-style = colors.base0B;
     };
   };
 }
