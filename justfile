@@ -15,5 +15,9 @@ just-fmt:
 format: nixfmt just-fmt
 
 [group('nix')]
+update:
+    nix flake update
+
+[group('nix')]
 check:
     nix flake check
