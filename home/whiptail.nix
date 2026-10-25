@@ -8,8 +8,12 @@
     border=blue,black
     title=cyan,black
     button=black,blue
-    actbutton=white,blue
     checkbox=lightgray,black
-    actcheckbox=cyan,black
+    actcheckbox=black,cyan
+    actbutton=black,cyan
+    listbox=lightgray,black
+    actlistbox=lightgray,black
+    sellistbox=black,cyan
+    actsellistbox=black,cyan
   '';
 }
