@@ -20,4 +20,4 @@ update:
 
 [group('nix')]
 check:
-    nix flake check
+    nix flake check --all-systems
