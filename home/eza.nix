@@ -6,6 +6,7 @@
     enableZshIntegration = true;
     enableBashIntegration = true;
 
+    # this should disable on a tty, but for some reason does not
     icons = "auto";
     git = true;
 
