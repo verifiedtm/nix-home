@@ -13,5 +13,9 @@
       "histappend"
       "checkwinsize"
     ];
+
+    initExtra = ''
+      bind 'set completion-ignore-case on'
+    '';
   };
 }

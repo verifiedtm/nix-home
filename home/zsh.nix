@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   programs.zsh = {
@@ -7,16 +7,11 @@
     enableCompletion = true;
 
     history = {
-      size = 1000;
-      save = 1000;
+      size = 10000;
+      save = 20000;
       share = true;
       ignoreAllDups = true;
-    };
-
-    shellAliases = {
-      # ls = if pkgs.stdenv.hostPlatform.isDarwin then "ls -G" else "ls --color=auto";
-      tree = "eza --tree --icons --git-ignore";
-      catp = "bat --style=plain";
+      ignoreSpace = true;
     };
 
     initContent = ''

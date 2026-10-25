@@ -30,8 +30,15 @@
     enable = true;
   };
 
-  home.sessionPath = [
-    "$HOME/bin"
-    "$HOME/.local/bin"
-  ];
+  home = {
+    shellAliases = {
+      tree = "eza --tree --icons --git-ignore";
+      catp = "bat --style=plain";
+    };
+    sessionPath = [
+      "$HOME/bin"
+      "$HOME/.local/bin"
+    ];
+  };
+
 }
