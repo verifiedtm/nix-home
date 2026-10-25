@@ -8,6 +8,7 @@
     ./btop.nix
     ./cava.nix
     ./delta.nix
+    ./dircolors.nix
     ./direnv.nix
     ./eza.nix
     ./fastfetch.nix
