@@ -26,24 +26,45 @@
       stylix,
       ...
     }:
+    let
+      pkgsFor = system: nixpkgs.legacyPackages.${system};
+      systems = [
+        "x86_64-linux"
+        "aarch64-darwin"
+      ];
+    in
     {
-      homeManagerModules.default = {
+      homeModules.default = {
         imports = [
           ./home/default.nix
           stylix.homeModules.stylix
         ];
       };
     }
-    // flake-utils.lib.eachDefaultSystem (
+    // flake-utils.lib.eachSystem systems (
       system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
-
+        pkgs = pkgsFor system;
+      in
+      {
+        devShells.default = pkgs.mkShell {
+          packages = with pkgs; [
+            nixfmt
+            just
+            fd
+          ];
+        };
+      }
+    )
+    // flake-utils.lib.eachSystem systems (
+      system:
+      let
+        pkgs = pkgsFor system;
         testHome = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           modules = [
-            self.homeManagerModules.default
+            self.homeModules.default
 
             {
               home.username = "test";
@@ -55,13 +76,7 @@
 
       in
       {
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            nixfmt
-            just
-            fd
-          ];
-        };
+
         checks.home = testHome.activationPackage;
       }
     );

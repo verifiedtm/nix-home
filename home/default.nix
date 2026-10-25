@@ -2,26 +2,27 @@
 
 {
   imports = [
-    ./stylix.nix
-    ./git.nix
-    ./delta.nix
-    ./vim.nix
-    ./neovim.nix
-    ./direnv.nix
-    ./zsh.nix
-    ./fzf.nix
-    ./starship.nix
-    ./ripgrep.nix
-    ./eza.nix
-    ./bat.nix
-    ./zoxide.nix
     ./atuin.nix
-    ./television.nix
-    ./fastfetch.nix
-    ./cava.nix
+    ./bat.nix
     ./btop.nix
-    ./yazi.nix
+    ./cava.nix
+    ./delta.nix
+    ./direnv.nix
+    ./eza.nix
+    ./fastfetch.nix
+    ./fzf.nix
+    ./git.nix
     ./lazygit.nix
+    ./neovim.nix
+    ./ripgrep.nix
+    ./starship.nix
+    ./stylix.nix
+    ./television.nix
+    ./vim.nix
+    ./whiptail.nix
+    ./yazi.nix
+    ./zoxide.nix
+    ./zsh.nix
   ];
 
   programs.home-manager.enable = true;
