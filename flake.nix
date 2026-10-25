@@ -35,7 +35,7 @@
     {
       homeModules.default = {
         imports = [
-          ./home/default.nix
+          ./home
           stylix.homeModules.stylix
         ];
       };
