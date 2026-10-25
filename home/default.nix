@@ -26,5 +26,12 @@
     ./zsh.nix
   ];
 
-  programs.home-manager.enable = true;
+  programs.home-manager = {
+    enable = true;
+  };
+
+  home.sessionPath = [
+    "$HOME/bin"
+    "$HOME/.local/bin"
+  ];
 }
