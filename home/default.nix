@@ -10,7 +10,7 @@
     ./delta.nix
     ./dircolors.nix
     ./direnv.nix
-    ./emacs.nix
+    ./emacs
     ./eza.nix
     ./fastfetch.nix
     ./fzf.nix

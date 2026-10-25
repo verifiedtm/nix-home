@@ -1,7 +1,10 @@
 { lib, pkgs, ... }:
-
 let
-  emacs = if pkgs.stdenv.hostPlatform.isLinux then pkgs.emacs-pgtk else pkgs.emacs;
+  emacs =
+    if pkgs.stdenv.hostPlatform.isDarwin then
+      import ./darwin.nix { inherit pkgs; }
+    else
+      pkgs.emacs-pgtk;
 in
 {
   programs.emacs = {
