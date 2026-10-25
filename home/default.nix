@@ -14,6 +14,7 @@
     ./fzf.nix
     ./git.nix
     ./lazygit.nix
+    ./moor.nix
     ./neovim.nix
     ./ripgrep.nix
     ./starship.nix
