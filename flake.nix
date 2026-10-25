@@ -27,7 +27,6 @@
       ...
     }:
     let
-      pkgsFor = system: nixpkgs.legacyPackages.${system};
       systems = [
         "x86_64-linux"
         "aarch64-darwin"
@@ -44,28 +43,12 @@
     // flake-utils.lib.eachSystem systems (
       system:
       let
-        pkgs = pkgsFor system;
-      in
-      {
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            nixfmt
-            just
-            fd
-          ];
-        };
-      }
-    )
-    // flake-utils.lib.eachSystem systems (
-      system:
-      let
-        pkgs = pkgsFor system;
+        pkgs = nixpkgs.legacyPackages.${system};
         testHome = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           modules = [
             self.homeModules.default
-
             {
               home.username = "test";
               home.homeDirectory = if pkgs.stdenv.hostPlatform.isDarwin then "/Users/test" else "/home/test";
@@ -76,7 +59,13 @@
 
       in
       {
-
+        devShells.default = pkgs.mkShell {
+          packages = with pkgs; [
+            nixfmt
+            just
+            fd
+          ];
+        };
         checks.home = testHome.activationPackage;
       }
     );
