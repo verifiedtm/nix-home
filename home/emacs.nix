@@ -1,9 +1,12 @@
 { lib, pkgs, ... }:
 
+let
+  emacs = if pkgs.stdenv.hostPlatform.isLinux then pkgs.emacs-pgtk else pkgs.emacs;
+in
 {
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs.override {
+    package = emacs.override {
       withNativeCompilation = true;
       withTreeSitter = true;
     };
