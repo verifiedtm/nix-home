@@ -10,4 +10,9 @@
 
     extraConfig = builtins.readFile ../dotfiles/vim/vimrc;
   };
+
+  home.sessionVariables = {
+    VISUAL = "vim";
+    EDITOR = "vim";
+  };
 }

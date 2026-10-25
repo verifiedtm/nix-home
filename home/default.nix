@@ -13,10 +13,12 @@
     ./eza.nix
     ./fastfetch.nix
     ./fzf.nix
+    ./ghci.nix
     ./git.nix
     ./lazygit.nix
     ./moor.nix
     ./neovim.nix
+    ./readline.nix
     ./ripgrep.nix
     ./starship.nix
     ./stylix.nix
@@ -33,6 +35,10 @@
   };
 
   home = {
+    sessionVariables = {
+      DOTNET_CLI_TELEMETRY_OPTOUT = "1";
+      VCPKG_DISABLE_MATRICS = "1";
+    };
     shellAliases = {
       tree = "eza --tree --git-ignore";
       catp = "bat --style=plain";

@@ -5,6 +5,7 @@
     enable = true;
 
     enableCompletion = true;
+    autocd = true;
 
     syntaxHighlighting = {
       enable = true;
@@ -20,7 +21,8 @@
 
     initContent = ''
       bindkey -e
-      setopt autocd
+
+      REPORT_TIME=2
 
       zstyle ':completion:*' auto-description 'specify: %d'
       zstyle ':completion:*' completer _expand _complete _correct _approximate
