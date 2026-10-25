@@ -32,7 +32,7 @@
 
   home = {
     shellAliases = {
-      tree = "eza --tree --icons --git-ignore";
+      tree = "eza --tree --git-ignore";
       catp = "bat --style=plain";
     };
     sessionPath = [
