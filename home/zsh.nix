@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, config, ... }:
 
 {
   programs.zsh = {
@@ -21,6 +21,16 @@
 
     initContent = ''
       bindkey -e
+
+
+      ${
+        # kitty provides these bindings when it's enabled
+        lib.optionalString (!config.programs.kitty.enable) ''
+          bindkey '\e[1;3D' backward-word
+          bindkey '\e[1;3C' forward-word
+        ''
+      }
+
 
       REPORT_TIME=2
 
