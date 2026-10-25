@@ -2,7 +2,7 @@
 
 {
   # todo, try ov
-  programs.moore = {
+  programs.moor = {
     enable = true;
 
     options = {
