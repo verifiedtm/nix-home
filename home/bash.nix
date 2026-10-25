@@ -12,6 +12,7 @@
     shellOptions = [
       "histappend"
       "checkwinsize"
+      "autocd"
     ];
 
     initExtra = ''
