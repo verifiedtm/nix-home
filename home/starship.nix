@@ -16,13 +16,17 @@ let
     red = "#f7768e";
   };
 
+  starship = lib.getExe config.programs.starship.package;
+
 in
 {
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
-    enableBashIntegration = true;
     presets = [ "tokyo-night" ];
+
+    # manual integration for term detection
+    enableZshIntegration = false;
+    enableBashIntegration = false;
 
     settings = {
       add_newline = false;
@@ -98,4 +102,22 @@ in
       };
     };
   };
+
+  programs.bash.initExtra = lib.mkAfter ''
+    if [[ "$TERM" == linux ]]; then
+      PS1='\[\e[44;37;1m\] \u@\h \[\e[0m\] \[\e[1;36m\]\w\[\e[0m\] \$ '
+    elif [[ "$TERM" != dumb ]]; then
+      eval "$(${starship} init bash)"
+    fi
+  '';
+
+  programs.zsh.initContent = lib.mkAfter ''
+    if [[ "$TERM" == linux ]]; then
+      autoload -Uz promptinit
+      promptinit
+      prompt adam1 blue cyan green plain
+    elif [[ "$TERM" != dumb ]]; then
+      eval "$(${starship} init zsh)"
+    fi
+  '';
 }
