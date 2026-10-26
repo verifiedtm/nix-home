@@ -13,6 +13,7 @@
     ./emacs.nix
     ./eza.nix
     ./fastfetch.nix
+    ./fd.nix
     ./fish.nix
     ./fzf.nix
     ./ghci.nix
