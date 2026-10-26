@@ -19,6 +19,7 @@
     ./lazygit.nix
     ./moor.nix
     ./neovim.nix
+    ./nushell.nix
     ./readline.nix
     ./ripgrep.nix
     ./starship.nix
