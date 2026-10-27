@@ -18,6 +18,7 @@
     ./fzf.nix
     ./ghci.nix
     ./git.nix
+    ./kitty.nix
     ./lazygit.nix
     ./moor.nix
     ./neovim.nix
