@@ -28,6 +28,7 @@
     ./starship.nix
     ./stylix.nix
     ./television.nix
+    ./tuicr.nix
     ./vim.nix
     ./whiptail.nix
     ./yazi.nix
