@@ -20,6 +20,7 @@
     ./git.nix
     ./kitty.nix
     ./lazygit.nix
+    ./man.nix
     ./moor.nix
     ./neovim.nix
     ./nushell.nix
@@ -55,4 +56,7 @@
     ];
   };
 
+  manual.manpages = {
+    enable = false;
+  };
 }
